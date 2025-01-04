@@ -181,6 +181,7 @@ img {
 	display: flex;
 	justify-content: space-between;
 	align-items: start;
+	padding-bottom: 140px;
 }
 
 .hero__left {
@@ -196,10 +197,6 @@ img {
 .hero__title {
 	font-size: 3.25rem;
 	line-height: 1.25;
-}
-
-.hero__description {
-	padding: 32px 0;
 }
 
 .hero__form {
@@ -308,7 +305,6 @@ img {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 auto;
-	margin-top: 40px;
 	justify-content: space-between;
 	align-items: flex-start;
 	width: 94%;
@@ -356,6 +352,7 @@ img {
 /* Quality Work */
 .quality-work {
 	display: flex;
+	padding-bottom: 150px;
 }
 
 .quality-work__header {
@@ -487,6 +484,7 @@ img {
 /* Values */
 .values {
 	display: flex;
+	padding-bottom: 150px;
 }
 
 .values__header {
@@ -592,6 +590,8 @@ img {
 	display: flex;
 	flex-direction: column;
 	margin: 0 auto;
+	padding-top: 50px;
+	padding-bottom: 150px;
 }
 
 .pricing__header {
@@ -681,6 +681,7 @@ img {
 
 .plan__button--business {
 	background: var(--color-white);
+	color: var(--color-primary);
 }
 
 .plan__item--enterprise--header,
@@ -713,7 +714,7 @@ img {
 	padding: 16px 64px;
 	border: none;
 	justify-self: flex-end;
-	max-width: fit-content;
+	width: fit-content;
 	font-weight: 700;
 	text-transform: uppercase;
 }
@@ -905,23 +906,32 @@ img {
 	background: var(--color-primary);
 	color: var(--color-white);
 	border-radius: 8px 0 8px 0;
-	margin-bottom: 80px;
+	margin: 0 auto 80px auto;
+	text-align: center;
 }
 
 .cta__notice {
+	text-align: left;
 	font-size: 1.875rem;
 	line-height: 1.5;
-	width: 54%;
+	width: 80%;
+}
+
+.cta__buttons {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	width: 70%;
 }
 
 .cta__button {
 	border-radius: 48px;
-	padding: 24px 48px;
+	padding: 20px 40px;
 	border: none;
 	justify-self: flex-end;
 	font-weight: 700;
 	font-size: 1.0rem;
-	margin: 0 24px;
+	margin: 0 16px;
 }
 
 .cta__button:hover {
@@ -1045,3 +1055,240 @@ img {
 .footer__button:hover {
 	filter: brightness(0.9);
 }
+
+@media (max-width: 1024px) {
+	.container {
+		margin: 0 auto;
+	}
+
+	.header,
+	.main {
+		padding: 0 32px;
+	}
+
+	.nav__menu--mobile {
+		display: block;
+	}
+
+	.nav__list {
+		position: fixed;
+		top: 16px;
+		right: -100vw;
+		width: 96vw;
+		margin-right: 2vw;
+		background: var(--color-white);
+		border: 1px solid var(--color-gray-7);
+		border-radius: 8px;
+		padding: 32px;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		transition: right 300ms ease;
+	}
+	
+	.nav__list--open {
+		right: 0; /* Slides into view */
+	}
+
+	.nav__item {
+		margin: 8px 0;
+		padding-bottom: 4px;
+	}
+
+	.nav__item, .nav__button {
+		font-size: 1.125rem;
+	}
+
+	.nav__item--close {
+		margin: 0;
+		padding-bottom: 0;
+		display: flex;
+		justify-content: flex-end;
+		align-items: end;
+		width: 100%;
+	}
+
+	.hero {
+		flex-direction: column;
+		padding-top: 100px;
+		padding-bottom: 0;
+		text-align: center;
+		align-items: center;
+		max-width: 70%;
+	}
+
+	.hero__left,
+	.hero__right {
+		width: 75%;
+	}
+
+	.hero__title {
+		font-size: 1.875rem;
+	}
+
+	.hero__description {
+		font-size: 1.0rem;
+		margin: 24px auto;
+	}
+
+	.hero__form {
+		width: 84%;
+		margin: 0 auto;
+	}
+
+	.hero__input,
+	.hero__button {
+		font-size: 1rem;
+	}
+
+	.hero__footer {
+		padding-top: 60px;
+	}
+
+	.hero__subheader {
+		font-size: 0.875rem;
+		padding-bottom: 16px;
+	}
+
+	.hero__customers {
+		width: 100%;
+		padding-bottom: 48px;
+	}
+
+	[class$="__banner"] {
+		font-size: 2.25rem;
+	}
+
+	.features {
+		width: 70%;
+		padding-top: 150px;
+	}
+
+	.features__banner,
+	.pricing__banner {
+		text-align: center;
+		font-size: 3rem;
+	}
+
+	.features__description {
+		max-width: 70%;
+		font-size: 0.875rem;
+	}
+
+	.features__list {
+		display: flex;
+		align-items: center;
+		margin-top: 0;
+	}
+
+	.feature {
+		width: 50%;
+		padding-bottom: 0;
+		justify-self: start;
+	}
+
+	.feature__banner {
+		font-size: 1.5rem;
+		padding-left: 16px;
+		padding-bottom: 0;
+	}
+
+	.feature__text {
+		font-size: 1.0rem;
+		padding-left: 16px;
+	}
+
+	.feature__icon {
+		margin: 0 auto;
+	}
+
+	[class$="__paragraph"],
+	.values__description,
+	.pricing__description {
+		font-size: 0.875rem;
+	}
+
+	.quality-work {
+		justify-content: flex-start;
+	}
+
+	.quality-work__header{
+		max-width: 39%;
+	}
+
+	.quality-work__image {
+		max-height: fit-content;
+	}
+
+	.steps__paragraph {
+		max-width: 84%;
+		padding-top: 16px;
+	}
+
+	.values__list {
+		flex-direction: column;
+	}
+
+	.value {
+		width: 65%;
+	}
+
+	.value:first-of-type {
+		padding-bottom: 32px;
+	}
+
+	.pricing__banner {
+		width: 70%;
+	}
+
+	.pricing__description {
+		max-width: 70%;
+	}
+
+	.plans {
+		flex-direction: column;
+	}
+
+	.plan {
+		width: 35%;
+		margin: 20px auto 40px;
+	}
+	
+	.plan__button {
+		width: 70%;
+	}
+
+	.testimonials {
+		justify-content: flex-start;
+	}
+
+	.testimonials__content {
+		max-width: 90%;
+	}
+
+	.testimonial__content {
+		max-width: 95%;
+	}
+
+	.cta {
+		padding: 80px 24px;
+		margin-bottom: 200px;
+		flex-direction: column;
+	}
+
+	.cta__notice {
+		width: 60%;
+		text-align: center;
+		padding-bottom: 16px;
+	}
+
+	.footer {
+		padding: 60px;
+	}
+
+	.footer__description {
+		font-size: 0.875rem;
+	}
+}
+
+
